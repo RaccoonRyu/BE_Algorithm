@@ -14,7 +14,7 @@ public class Sort3_2 {
         // 계수 테이블 생성
         int[] cntArr = new int[max + 1];
 
-        // loop 수행하며 계수테이블에 정렬하려는 값을 계수 테이블의 인덱스로 삼고, 해당 인덱스를 갖는 계수 테이블의 값 1 증가(수를 셌다는 의미)
+        // loop 수행하며 정렬하려는 값을 계수 테이블의 인덱스로 삼고, 해당 인덱스를 갖는 계수 테이블의 값 1 증가(수를 셌다는 의미)
         for (int i = 0; i < arr.length; i++) {
             cntArr[arr[i]]++;
         }
@@ -25,7 +25,7 @@ public class Sort3_2 {
         for (int i = 0; i < cntArr.length; i++) {
             while (cntArr[i] > 0) {
                 arr[idx++] = i;
-                // 위의 로직을 수행하고나면 데이터를 arr에 정렬했으므로 집계 테이블이 가진 수를 1씩 뺌
+                // 위의 로직을 수행하고나면 데이터를 arr에 정렬했으므로 계수 테이블이 가진 수를 1씩 뺌
                 cntArr[i] -= 1;
             }
         }
@@ -52,6 +52,7 @@ public class Sort3_2 {
                 cnt--;
             }
         }
+        System.out.println(map);
 
     }
 
